@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dynamic Section Height</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Source Code Pro', monospace;
+            background-image: url("images/swirl.png");
+            background-size: cover;
+            background-position: center;
+            font-weight: 300;
+        }
+
+        .background-column {
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85%;
+            height: auto;
+            background-color: rgba(255, 250, 184, 0.712);
+            z-index: -1;
+            max-width: 1080px;
+        }
+
+        .container {
+            position: relative;
+            margin-top: 64px;
+        }
+
+        .section {
+            display: flex; /* Use flexbox to align image and text */
+            align-items: flex-start; /* Align items at the top */
+            gap: 20px; /* Add space between the image and text */
+            padding: 15px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            
+            border-radius: 5px;
+            border-bottom: 4px dotted #d9fffc;
+            border-bottom: thin dashed #e5f0ef;
+            background-color: #ffffff00; /* White background for sections */
+        }
+
+        .section img {
+            border-radius: 10px;
+            max-width: 100%; /* Ensure image doesn't overflow */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .section p {
+            margin: 0;
+        }
+
+        .title {
+            font-size: 1.8em; /* Adjust font size for title */
+            text-align: center; /* Center the text of the title */
+            margin: 0; /* Remove default margin */
+        }
+        
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 50px;
+            padding: 10px 0;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background for nav */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .centered {
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Optional: Center text inside the element */
+    width: fit-content; /* Shrinks the element to fit the text */
+}
+    </style>
+</head>
+<body>
+    
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="seLab.html">Software Engineering</a></li>
+            <li><a href="resume.html">Projects</a></li>
+        </ul>
+    </nav>
+    <div class="background-column">
+    <main>
+        <div class="container">
+            
+            
+            
+            <h1 class="centered">iOS Video Chat Client</h1>
+            <section class="section">
+               
+                <img src="images/videochat.png" alt="Group Photo" width="150">
+                <img src="images/appIcon.png" alt="test" width="96">
+                
+                <p>
+                    My Research Assistants and I developed a video chat application for iOS! It has the ability to video chat to any client that supports WebRTC (Web Browsers, phones, even VR Headsets)! The total list of features includes <br>
+                    - Video Chat <br>
+                    - Form Creation <br>
+                    - Messaging <br>
+                    - Usernames <br>
+                    
+                    This client was written in Swift because we wanted a native and seamless experience for the end users.
+                </p>
+            </section>
+
+            <h1 class="centered">Video Chat Server (Fork)</h1>
+            <section class="section">
+               
+                <img src="images/server.png" alt="Group Photo" width="150">
+
+                
+                <p>
+                    We modified a popular peer-to-peer video chat server called PeerJS. We extended much of the functionality by adding:<br>
+                    - Push Notifications to iOS Devices <br>
+                    - Support for iOS Devices<br>
+                    - Support for REST API Authentication <br>
+                    All of these changes were made with the goal of getting our clients to be cross-compatible, while making a robust video chat platform.
+                </p>
+            </section>
+
+            <h1 class="centered">Video Chat Website</h1>
+            <section class="section">
+               
+                <img src="images/authPage.png" alt="Group Photo" width="150">
+
+                
+                <p>
+                    We created a Website for videochatting. This website is compatible with our video chat clients! Here are some of the features of the website we created <br>
+                    - peer-to-peer video chats <br>
+                    - Form Creation <br>
+                    - Authentication with a REST API<br>
+                    - Messaging to the person you are connected to <br>
+                </p>
+            </section>
+
+            <section class="section">
+                <img src="images/groupPhoto.jpeg" alt="Group Photo" width="200">
+                <p>
+                    I am currently a PhD Student at Virginia Commonwealth University! I am fortunate enough to work with a great group of Research Assistants at the VCU Software Engineering Lab.
+                </p>
+            </section>
+        </div>
+    </main>
+</div>
+
+
+    <footer></footer>
+</body>
+</html>
